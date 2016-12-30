@@ -3,18 +3,24 @@
  $PROJDIR/Obj/
  
 # exclude everything
- Connorville/Temp/*
- Connorville/Library/*
- Connorville/Obj/*
+Connorville/Temp/*
+Connorville/Library/*
+Connorville/Library/metadata/*
+Connorville/Obj/*
 
- # exception to the rule
- !Connorville/Temp/.gitkeep 
- !Connorville/Library/.gitkeep 
- !Connorville/Obj/.gitkeep 
+# exception to the rule
+!Connorville/Temp/.gitkeep 
+!Connorville/Library/.gitkeep 
+!Connorville/Obj/.gitkeep 
 
- *.csproj
- *.unityproj
- *.sln
- *.user
- *.userprefs
- *.DS_store
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.DS_store
+
+Connorville/Library/assetDatabase3
+Connorville/Library/metadata/00/00000000000000001000000000000000
+Connorville/Library/metadata/00/0000000000000000a100000000000000
+Connorville/Library/metadata/21/21eff446d50eaf44a85985cd4c0b6fa1
