@@ -2,15 +2,16 @@
  $PROJDIR/Library/
  $PROJDIR/Obj/
  
- Connorville/Temp/
- Connorville/Library/
- Connorville/Obj/
- 
- Connorville/Temp
- Connorville/Library
- Connorville/Obj
- 
- 
+# exclude everything
+ Connorville/Temp/*
+ Connorville/Library/*
+ Connorville/Obj/*
+
+ # exception to the rule
+ !Connorville/Temp/.gitkeep 
+ !Connorville/Library/.gitkeep 
+ !Connorville/Obj/.gitkeep 
+
  *.csproj
  *.unityproj
  *.sln
