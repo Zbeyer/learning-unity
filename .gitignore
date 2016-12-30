@@ -1,18 +1,9 @@
-Connorville/Assets/Artwork.meta
-Connorville/Assets/Scenes.meta
-Connorville/Assets/Scripts.meta
-Connorville/Assets/Artwork/Cytex VII.jpg.meta
-Connorville/Assets/Artwork/Square.png.meta
-Connorville/Assets/Scenes/Connorville.unity.meta
-Connorville/Assets/Scripts/CameraPanKeybindings.cs.meta
-Connorville/Assets/Scripts/PixelPerfectCamera.cs.meta
-Connorville/Library/metadata/11/1128233e6f31843ceb14cd7da10f6fb8
-Connorville/Library/metadata/11/1128233e6f31843ceb14cd7da10f6fb8.info
-Connorville/Library/metadata/2d/2d9ba22ce4031433595f04cf794c929a
-Connorville/Library/metadata/2d/2d9ba22ce4031433595f04cf794c929a.info
-Connorville/Library/metadata/3e/3ebb7255b57bd4d75b263342693eb8a6
-Connorville/Library/metadata/3e/3ebb7255b57bd4d75b263342693eb8a6.info
-Connorville/Library/metadata/60/60cce9c76ace5460f8535e87c22d7302
-Connorville/Library/metadata/60/60cce9c76ace5460f8535e87c22d7302.info
-Connorville/Library/metadata/ea/ea573a1ac8f674e82be49b14436d70b0
-Connorville/Library/metadata/ea/ea573a1ac8f674e82be49b14436d70b0.info
+
+Connorville/*.meta
+Connorville/Library/metadata/*
+Connorville/Temp/*
+*.meta
+
+*.userprefs
+
+*.dwlt
