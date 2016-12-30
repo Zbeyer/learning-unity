@@ -1,9 +1,14 @@
-
-Connorville/*.meta
-Connorville/Library/metadata/*
-Connorville/Temp/*
-*.meta
-
-*.userprefs
-
-*.dwlt
+ $PROJDIR/Temp/
+ $PROJDIR/Library/
+ $PROJDIR/Obj/
+ 
+ Connorville/Temp/
+ Connorville/Library/
+ Connorville/Obj/
+ 
+ *.csproj
+ *.unityproj
+ *.sln
+ *.user
+ *.userprefs
+ *.DS_store
