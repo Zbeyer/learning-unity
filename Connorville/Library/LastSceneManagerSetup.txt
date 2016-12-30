@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Connorville.unity
-  isLoaded: 1
-  isActive: 1
