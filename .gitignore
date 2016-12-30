@@ -6,6 +6,11 @@
  Connorville/Library/
  Connorville/Obj/
  
+ Connorville/Temp
+ Connorville/Library
+ Connorville/Obj
+ 
+ 
  *.csproj
  *.unityproj
  *.sln
