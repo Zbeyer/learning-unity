@@ -1,11 +1,10 @@
-Connorville/Temp/*
-Connorville/Library/*
-Connorville/Obj/*
-
-#Not sure what double * does, exactly...
 Connorville/Temp/**
 Connorville/Library/**
 Connorville/Obj/**
+
+Desert\ Survival/Temp/**
+Desert\ Survival/Library/**
+Desert\ Survival/Obj/**
 
 *.csproj
 *.unityproj
