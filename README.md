@@ -1,5 +1,5 @@
 # learning-unity
-This is a public repository for small sample Unity projects. It is intended to server as a collective reference for new Unity developers. All contents exist as 'work in progress.' When adding to this repository, please include references and links to supporting content, code snippets, or relavent tutorials. Please do not violate license agreements with borrowed or purchased assets. Honor the intellectual property of your peers.
+This is a public repository for small sample Unity projects. It is intended to serve as a collective reference for new Unity developers. All contents exist as 'work in progress.' When adding to this repository, please include references and links to supporting content, code snippets, or relavent tutorials. Please do not violate license agreements with borrowed or purchased assets. Honor the intellectual property of your peers.
 
 ### Please keep the root directory clean
 The folder structure is organized as project folders. Each folder within the root is a standalone project. Please keep it tidy.
