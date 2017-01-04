@@ -13,3 +13,5 @@ Desert\ Survival/Obj/**
 *.userprefs
 *.DS_store
 Connorville/Assembly-CSharp.csproj
+
+.vscode/settings.json
