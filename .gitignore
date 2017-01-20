@@ -10,12 +10,13 @@ Desert\ Survival/Temp/**
 Desert\ Survival/Library/**
 Desert\ Survival/Obj/**
 
+# syntax: glob
 *.csproj
-*.unityproj
 *.sln
+*.suo
+
+*.unityproj
 *.user
 *.userprefs
 *.DS_store
-Connorville/Assembly-CSharp.csproj
 
-.vscode/settings.json
