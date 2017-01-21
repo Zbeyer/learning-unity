@@ -1,0 +1,14 @@
+Hello, welcome to the sandbox! Press "Enter" To progress the dialogue.
+...
+VERY GOOD!!!
+This project isn't terribly impressive...
+...
+It is a combination of scripts following gamesplusjames tutorials, like this one: https://youtu.be/ehmBIP5sj0M
+The tile map was made using the "Tiled Editor" 
+The sprites on sceen are a modification of a sheet found on Open Game Art [LPC_Terrain].
+Image attribution is included in the project on github, but original image credit goes to Lanea Zimmerman (AKA Sharm).
+The skybox in the background comes from a free Unity Asset Store download called, "PurpleNebula."
+The tilemap was imported using "Tiled2Unity" Copyright (C) 2014 Sean Barton under MIT License.
+This is my first Unity sandbox project, using the free Unity Personal edition version 5.5.0f3
+...
+You can use WASD to pan around the map, or try plugging in a controller!
