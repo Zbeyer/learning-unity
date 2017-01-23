@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
+
+	public bool isCanMovePlayer = true;
 //	private Animator anim;
 
 	// Use this for initialization
@@ -13,6 +15,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (!isCanMovePlayer) {
+			return;
+		}
+
 		if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f) {
 			transform.Translate (
 				new Vector3(

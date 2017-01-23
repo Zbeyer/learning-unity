@@ -1,0 +1,5 @@
+﻿Additional Controls (PRESS "Enter" to Continue).
+You know how to use "W" to move "UP"... you can also use the arrow keys... (PRESS "Enter" to Continue).
+"S" will move "DOWN"... (PRESS "Enter" to Continue).
+"A" will move "LEFT"... (PRESS "Enter" to Continue).
+"D" will move "RIGHT"... (PRESS "Enter" to Continue).

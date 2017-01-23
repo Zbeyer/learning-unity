@@ -1,7 +1,5 @@
-Press "Enter" To progress the dialogue.
-VERY GOOD!!! You can use WASD or arrow keys to pan around the map.
-...
-This project isn't terribly impressive...
+ATTRIBUTION (PRESS "Enter" to Continue). (PRESS "Q" to Quit).
+This project isn't terribly impressive...  (PRESS "Enter" to Continue). (PRESS "Q" to Quit).
 The tile map was made using the "Tiled Editor," the sprites on sceen are a modification of a sheet found on Open Game Art [LPC_Terrain].
 Image attribution is included in the project on github, but original image credit goes to Lanea Zimmerman (AKA Sharm).
 ...

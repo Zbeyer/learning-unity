@@ -10,12 +10,17 @@ public class TextBoxManager : MonoBehaviour {
 
 	public GameObject textBox;
 	public Text theText;
+	public Text scrollCountText;
 
 	public TextAsset textFile;
 	public string[] textLines;
 
 	public int currentLine;
 	public int endAtLine;
+	public int numberOfScrolls = 0;
+
+	public bool isActive;
+	public bool stopPlayerMovement;
 
 	public PlayerController player;
 
@@ -41,14 +46,40 @@ public class TextBoxManager : MonoBehaviour {
 		//If I ever retool this script for a real product, this line numbering wouldn't be necessary...
 		for (int i = 0; i < textLines.Length; i++) {
 			if (textLines [i].Length > 0) {
-				textLines [i] = textLines [i] + "\n — ( " + i + " / " + endAtLine + " )";
+				textLines [i] = textLines [i] + "\n — ( " + (i + 1) + " / " + (endAtLine + 1) + " )";
 			}
+		}
+
+		for (int i = 0; i < textLines.Length; i++) {
+			//Zbeyer TODO: this should really be a method on the manager...
+			if (textLines [i].Length > 0) {
+				string text = textLines [i];
+				text = text.Replace ("... ", "...\n");
+				text = text.Replace ("(PRESS", "\n(PRESS");
+				textLines [i] = text;
+			}
+		}
+
+		if (isActive) {
+			EnableTextBox ();
+		} else {
+			DisableTextBox ();
 		}
 
 	}
 
 	void Update() {
+
+		if (!isActive) {
+			return;
+		}
+
 		//Actively set the current text to the current line
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			DisableTextBox ();
+		}
+			
+
 		if (currentLine < textLines.Length) {
 			//Prevent index going out of bounds...
 			theText.text = textLines [currentLine]; //Set displayed text
@@ -59,7 +90,7 @@ public class TextBoxManager : MonoBehaviour {
 		 * Input.GetKeyDown ("Jump") ||  
 		*/
 
-			if ((Input.GetKeyDown (KeyCode.Return)) && (textBox.active)) {
+			if (Input.GetKeyDown (KeyCode.Return)) {
 				if ((textLines.Length) > currentLine) {
 					currentLine += 1;
 
@@ -72,11 +103,45 @@ public class TextBoxManager : MonoBehaviour {
 				}
 			}
 		} else {
-			textBox.SetActive(false);
+			DisableTextBox ();
 		}
 
 		if (currentLine > endAtLine) {
-			textBox.SetActive(false);
+			DisableTextBox ();
 		}
+	}
+
+
+	public void EnableTextBox() {
+		textBox.SetActive(true);
+		isActive = true;
+
+		if (stopPlayerMovement) {
+			player.isCanMovePlayer = false;
+		}
+	}
+
+	public void DisableTextBox() {
+		textBox.SetActive(false);
+		isActive = false;
+
+		player.isCanMovePlayer = true;
+	}
+
+	public void ReloadText(TextAsset newText) {
+		if(newText != null) {
+			if(textFile != newText) {
+				textFile = newText;
+
+				textLines = new string[1];
+				textLines = (textFile.text.Split ('\n'));
+				endAtLine = textLines.Length - 1;
+			}
+		}
+	}
+
+	public void PickUpScroll() {
+		numberOfScrolls++;
+		scrollCountText.text = "Scrolls Collected: " + numberOfScrolls;
 	}
 }

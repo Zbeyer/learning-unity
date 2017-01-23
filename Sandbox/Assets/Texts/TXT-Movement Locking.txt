@@ -1,0 +1,21 @@
+﻿Some text will prevent you from moving... (PRESS "Enter" to Continue).
+You may press "Q" to quit the current text display. (PRESS "Q" to quit)
+...
+I thought I said "Press "Q" to quit."
+...
+Are you listening?
+"Press "Q" to quit." means, on your keyboard, find the "Q" key and "PRESS" it down.
+Perhapse I'm not making myself clear... at your fingertips, there should be a keyboard...
+I know you've got one because you keep advancing the text. (PRESS "Enter" to Continue).
+See, you did it just there. (PRESS "Enter" to Continue).
+You are very good at that. (PRESS "Enter" to Continue).
+Very very good! (PRESS "Enter" to Continue).
+Now if I were to suggest you press a different key (PRESS "Q" to Quit).
+You wouldn't need to keep this going... (PRESS "Q" to Quit).
+I really can't say it any clearer... (PRESS "Q" to Quit).
+...(PRESS "Q" to Quit).
+... ...(PRESS "Q" to Quit)
+... ... ...(PRESS "Q" to Quit)
+...
+Well I think you get the general point.
+Let me know if you have any other question.
