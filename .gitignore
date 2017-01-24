@@ -2,6 +2,10 @@ Connorville/Temp/**
 Connorville/Library/**
 Connorville/Obj/**
 
+mobile-testing/Temp/**
+mobile-testing/Library/**
+mobile-testing/Obj/**
+
 Sandbox/Temp/**
 Sandbox/Library/**
 Sandbox/Obj/**
@@ -19,4 +23,5 @@ Desert\ Survival/Obj/**
 *.user
 *.userprefs
 *.DS_store
+
 
