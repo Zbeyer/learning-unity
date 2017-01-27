@@ -11,6 +11,7 @@ public class TextBoxManager : MonoBehaviour {
 	public GameObject textBox;
 	public Text theText;
 	public Text scrollCountText;
+	public float scrollSpeedValue = 0.25f;
 
 	public TextAsset textFile;
 	public string[] textLines;
@@ -142,6 +143,7 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void PickUpScroll() {
 		numberOfScrolls++;
+		player.moveSpeed += scrollSpeedValue;
 		scrollCountText.text = "Scrolls Collected: " + numberOfScrolls;
 	}
 }

@@ -28,43 +28,54 @@ public class ActivateTextAtLine : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter2D (Collider2D other) {
+	void ActivateTextTriggerEffect() {
+		textManager.ReloadText (theText);
+		textManager.currentLine = startLine;
 
-		if (other.name == "Player") {
-			textManager.ReloadText (theText);
-			textManager.currentLine = startLine;
-
-			if (enumerateText) {
-				for (int i = 0; i < textManager.textLines.Length; i++) {
-					//Zbeyer TODO: this should really be a method on the manager...
-					if (textManager.textLines [i].Length > 0) {
-						textManager.textLines [i] = textManager.textLines [i] + "\n — ( " + (i + 1) + " / " + (textManager.endAtLine + 1) + " )";
-					}
-				}
-			}
-
+		if (enumerateText) {
 			for (int i = 0; i < textManager.textLines.Length; i++) {
 				//Zbeyer TODO: this should really be a method on the manager...
 				if (textManager.textLines [i].Length > 0) {
-					string text = textManager.textLines [i];
-					text = text.Replace ("... ", "...\n");
-					text = text.Replace ("(PRESS", "\n(PRESS");
-					textManager.textLines [i] = text;
+					textManager.textLines [i] = textManager.textLines [i] + "\n — ( " + (i + 1) + " / " + (textManager.endAtLine + 1) + " )";
 				}
 			}
-
-			if (endLine > 0) {
-				textManager.endAtLine = endLine;
-			} else {
-//				endAtLine = textLines.Length - 1;
-			}
-
-			textManager.stopPlayerMovement = locksMovement;
-			textManager.EnableTextBox ();
 		}
 
+		for (int i = 0; i < textManager.textLines.Length; i++) {
+			//Zbeyer TODO: this should really be a method on the manager...
+			if (textManager.textLines [i].Length > 0) {
+				string text = textManager.textLines [i];
+				text = text.Replace ("... ", "...\n");
+				text = text.Replace ("(PRESS", "\n(PRESS");
+				textManager.textLines [i] = text;
+			}
+		}
+
+		if (endLine > 0) {
+			textManager.endAtLine = endLine;
+		} else {
+			//				endAtLine = textLines.Length - 1;
+		}
+
+		textManager.stopPlayerMovement = locksMovement;
+		textManager.EnableTextBox ();
+	
 		if (destroyWhenActived) {
 			Destroy(gameObject);
 		}
+	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+
+		if (other.name == "Player") {
+			ActivateTextTriggerEffect ();
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.name == "Player") {
+			ActivateTextTriggerEffect ();
+		}
+		Debug.Log ("TRIGGER!" + other.tag);;;
 	}
 }
