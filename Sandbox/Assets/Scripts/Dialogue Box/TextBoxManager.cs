@@ -14,6 +14,7 @@ public class TextBoxManager : MonoBehaviour {
 	public float scrollSpeedValue = 0.25f;
 
 	public TextAsset textFile;
+	public TextAsset finalTextFile;
 	public string[] textLines;
 
 	public int currentLine;
@@ -127,6 +128,18 @@ public class TextBoxManager : MonoBehaviour {
 		isActive = false;
 
 		player.isCanMovePlayer = true;
+
+		if (numberOfScrolls == 30) {
+			for(int i = numberOfScrolls; i < 50; i++) {
+				PickUpScroll ();
+			}
+
+			if(finalTextFile) {
+				ReloadText (finalTextFile);
+				currentLine = 0;
+				EnableTextBox ();
+			}
+		}
 	}
 
 	public void ReloadText(TextAsset newText) {

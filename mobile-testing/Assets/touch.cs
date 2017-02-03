@@ -5,7 +5,6 @@ using UnityEngine.UI;   //Allows us to use UI.
 
 
 public class touch : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 		
@@ -14,13 +13,12 @@ public class touch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-
 		//Check if Input has registered more than zero touches
-		if (Input.touchCount > 0)
+		if ((Input.touchCount > 0)||(Input.anyKeyDown))
 		{
 			//Store the first touch detected.
-			Touch myTouch = Input.touches[0];
-
+			if (Input.touchCount > 0) {
+				Touch myTouch = Input.touches [0];
 			//Check if the phase of that touch equals Began
 			if (myTouch.phase == TouchPhase.Began)
 			{
@@ -28,8 +26,20 @@ public class touch : MonoBehaviour {
 //				touchOrigin = myTouch.position;
 
 				Debug.Log ("TOUCHED!");
-			}
+			
+				}			}
+			
 //
+			if (gameObject.GetComponent<Renderer> ().material.color == Color.red) {
+				gameObject.GetComponent<Renderer> ().material.color = Color.green;
+			} else if (gameObject.GetComponent<Renderer> ().material.color == Color.green) {
+				gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+			} else {
+				gameObject.GetComponent<Renderer> ().material.color = Color.red;
+			}
+
+
+
 //			//If the touch phase is not Began, and instead is equal to Ended and the x of touchOrigin is greater or equal to zero:
 //			else if (myTouch.phase == TouchPhase.Ended && touchOrigin.x >= 0)
 //			{
